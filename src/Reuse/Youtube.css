@@ -1,0 +1,16 @@
+.btn-close {
+  background-color: white;
+}
+
+.modal-body,
+.modal-header {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.modal-content {
+  background-color: transparent;
+}
+
+.modal-header {
+  border-bottom: none;
+}

@@ -1,19 +1,21 @@
-import React from 'react'
-import BookATable from '../Reuse/BookATable'
-import Testimonial from '../Reuse/Testimonial'
-import Title from '../Reuse/Title'
-import Common from '../library/Service/Common.jsx'
+import React, { memo } from 'react'
 import gallery1 from '../Images/gallery/abtgallery1.jpg'
 import gallery2 from '../Images/gallery/abtgallery2.jpg'
 import gallery3 from '../Images/gallery/abtgallery3.jpg'
 import gallery4 from '../Images/gallery/abtgallery4.jpg'
 import gallery5 from '../Images/gallery/abtgallery5.jpg'
 import aboutList from '../library/Data/AboutList.jsx'
+import Common from '../library/Service/Common.jsx'
+import BookATable from '../Reuse/BookATable'
 import OurChefsList from '../Reuse/OurChefsList'
+import Testimonial from '../Reuse/Testimonial'
+import Title from '../Reuse/Title'
 
 const About = () => {
 
   let isDesk = Common.isDesktop() ? true : false
+  // const dispatch = useDispatch();
+  // const { value } = useSelector((state) => state.home)
 
   return (
     <>
@@ -67,4 +69,4 @@ const About = () => {
   )
 }
 
-export default About
+export default memo(About)

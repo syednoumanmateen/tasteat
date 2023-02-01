@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import chefsIcon from '../Images/chefs/thumburl.jpg'
 import videoContext from '../library/Service/Context.jsx'
 import Title from '../Reuse/Title'
@@ -91,4 +91,4 @@ const ChefSingle = () => {
   )
 }
 
-export default ChefSingle
+export default memo(ChefSingle)

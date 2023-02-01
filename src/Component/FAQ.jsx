@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import faqList from '../library/Data/FAQ.jsx'
 import common from '../library/Service/Common.jsx'
 import Title from '../Reuse/Title'
@@ -51,4 +51,4 @@ const FAQ = () => {
   )
 }
 
-export default FAQ
+export default memo(FAQ)

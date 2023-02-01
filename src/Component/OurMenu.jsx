@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Common from '../library/Service/Common.jsx'
 import Title from '../Reuse/Title'
 import menuList from '../library/Data/Menu.jsx'
@@ -37,4 +37,4 @@ const OurMenu = () => {
   )
 }
 
-export default OurMenu
+export default memo(OurMenu)

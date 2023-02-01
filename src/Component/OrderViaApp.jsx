@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import common from '../library/Service/Common.jsx'
 import Frequent from '../Reuse/Frequent'
 import Recent from '../Reuse/Recent'
@@ -55,4 +55,4 @@ const OrderViaApp = () => {
   )
 }
 
-export default OrderViaApp
+export default memo(OrderViaApp)

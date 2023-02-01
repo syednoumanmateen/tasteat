@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import recipeIcon from '../Images/recipe/thumburl.jpg'
 import Title from '../Reuse/Title'
 import Video from '../Reuse/Video'
@@ -105,4 +105,4 @@ const Recipe = () => {
   )
 }
 
-export default Recipe
+export default memo(Recipe)

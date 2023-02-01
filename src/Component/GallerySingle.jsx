@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Title from '../Reuse/Title'
 import BookATable from '../Reuse/BookATable.jsx'
 import { gallerySingleList } from '../library/Data/Gallery.jsx'
@@ -38,4 +38,4 @@ const GallerySingle = () => {
   )
 }
 
-export default GallerySingle
+export default memo(GallerySingle)

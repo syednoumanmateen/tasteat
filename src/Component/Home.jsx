@@ -1,14 +1,14 @@
-import React from 'react'
-import BookATable from '../Reuse/BookATable'
-import Testimonial from '../Reuse/Testimonial'
-import '../Reuse/Common.css'
-import Offer from '../Reuse/Offer'
-import Popular from '../Reuse/Popular'
-import OurMenuList from '../Reuse/OurMenuList'
-import menuList from '../library/Data/Menu.jsx'
-import Common from '../library/Service/Common.jsx'
+import React, { memo } from 'react'
 import menu from '../Images/menu/menu.jpg'
 import { offerList, timeList } from '../library/Data/Home.jsx'
+import menuList from '../library/Data/Menu.jsx'
+import Common from '../library/Service/Common.jsx'
+import BookATable from '../Reuse/BookATable'
+import '../Reuse/Common.css'
+import Offer from '../Reuse/Offer'
+import OurMenuList from '../Reuse/OurMenuList'
+import Popular from '../Reuse/Popular'
+import Testimonial from '../Reuse/Testimonial'
 
 const Home = () => {
 
@@ -95,4 +95,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default memo(Home)

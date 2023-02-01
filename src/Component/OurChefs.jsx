@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Title from '../Reuse/Title'
 import Testimonial from '../Reuse/Testimonial.jsx'
 import OurChefsList from '../Reuse/OurChefsList'
@@ -49,4 +49,4 @@ const OurChefs = () => {
   )
 }
 
-export default OurChefs
+export default memo(OurChefs)

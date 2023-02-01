@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Title from '../Reuse/Title'
 import { galleryList } from '../library/Data/Gallery.jsx'
 import Common from '../library/Service/Common.jsx'
@@ -50,4 +50,4 @@ const Gallery = () => {
   )
 }
 
-export default Gallery
+export default memo(Gallery)

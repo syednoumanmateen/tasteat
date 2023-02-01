@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import OurBranches from '../Reuse/OurBranches'
 import Title from '../Reuse/Title'
 import Common from '../library/Service/Common.jsx'
@@ -83,4 +83,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default memo(Contact)

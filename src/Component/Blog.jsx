@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import BookATable from '../Reuse/BookATable'
 import Instagram from '../Reuse/Instagram'
 import Title from '../Reuse/Title'
@@ -14,4 +14,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default memo(Blog)

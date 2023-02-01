@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Frequent from '../Reuse/Frequent'
 import Orderviaapp from '../Reuse/Orderviaapp'
 import Title from '../Reuse/Title'
@@ -48,4 +48,4 @@ const OrderViaAppSingle = () => {
   )
 }
 
-export default OrderViaAppSingle
+export default memo(OrderViaAppSingle)

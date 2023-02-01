@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Title from '../Reuse/Title'
 import Common from '../library/Service/Common.jsx'
 import img1 from '../Images/book1.jpg'
@@ -86,4 +86,4 @@ const BookATable = () => {
   )
 }
 
-export default BookATable
+export default memo(BookATable)

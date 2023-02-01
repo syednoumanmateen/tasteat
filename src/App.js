@@ -17,8 +17,15 @@ import Blog from "./Component/Blog";
 import BookATable from "./Component/BookATable";
 import Footer from "./Reuse/Footer";
 import Navbar from "./Reuse/Navbar";
+// import { useEffect } from "react";
+// import common from '../src/library/Service/Common.jsx'
 
 const App = () => {
+
+  // let isDesk = common.isDesktop ? true : false
+  // useEffect(() => {
+  //   window.location.reload(true);
+  // }, [isDesk])
 
   return (
     <>

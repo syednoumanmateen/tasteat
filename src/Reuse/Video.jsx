@@ -14,7 +14,7 @@ const Video = () => {
     <>
       <div className='bg-image-video' style={{ backgroundImage: "url(" + icon + ")" }}>
         <div className='text-center middle' onClick={() => setModalShow(true)}>
-          <div className=' width-video mx-auto brd-rad-50'>
+          <div className='width-video mx-auto brd-rad-50'>
             <img className={`align-middle ${isDesk ? 'py-4 px-3' : 'p-3'}`} width={'50px'} height={'100px'} src={play} alt="play" />
           </div>
         </div>

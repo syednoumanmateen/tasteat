@@ -26,7 +26,7 @@ const Popular = () => {
                 <div className="col-12 col-lg-3 mb-3" key={ind}>
                   <div className="card border-0">
                     <div className={`card-body ${isDesk ? '' : ''}`}>
-                      <img width={'100%'} key={ind} src={e.icon} alt={ind} />
+                      <img width={'100%'} src={e.icon} alt={e.icon} />
                       <div className="row g-0 brd-btm fs-2 fw600 py-2">
                         <div className="col-10">{e.label}</div>
                         <div className="col-2 text-end">${e.value}</div>

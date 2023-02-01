@@ -9,6 +9,7 @@ import gallery3 from '../Images/gallery/abtgallery3.jpg'
 import gallery4 from '../Images/gallery/abtgallery4.jpg'
 import gallery5 from '../Images/gallery/abtgallery5.jpg'
 import aboutList from '../library/Data/AboutList.jsx'
+import OurChefsList from '../Reuse/OurChefsList'
 
 const About = () => {
 
@@ -39,7 +40,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        chefs
+        <OurChefsList name={'about'} />
         <Testimonial name={'About'} />
         <div className="container-fluid py-5">
           <div className='text-center'>

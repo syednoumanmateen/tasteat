@@ -1,11 +1,18 @@
 import React, { memo } from 'react'
-import chefsList from '../library/Data/Chefs.jsx'
 import Common from '../library/Service/Common.jsx'
+import chefsList from '../library/Data/Chefs.jsx'
 
-const OurChefsList = () => {
+const OurChefsList = (props) => {
 
   let isDesk = Common.isDesktop() ? true : false
 
+  let chefsListData
+
+  if (props.name === 'about') {
+    chefsListData = chefsList.slice(0, 4)
+  } else {
+    chefsListData = chefsList
+  }
   return (
     <>
       <div className={`container-fluid ${isDesk ? 'p-5' : 'p-3'}`}></div>
@@ -15,10 +22,10 @@ const OurChefsList = () => {
         </div>
         <div className='fw500 fs28 text-center mb-3'>Meet Our Professional Chefs</div>
         <div className="row p-0 g-0">
-          {chefsList.map((e, ind) => {
+          {chefsListData.map((e, ind) => {
             return (
               <>
-                <div key={ind} className="col-12 col-lg-4 p-0">
+                <div key={ind} className={`col-12 ${props.name === 'about' ? 'col-lg-3' : 'col-lg-4'}  p-0`}>
                   <div className="card border-0 text-center">
                     <div className="card-body px-3">
                       <img className='img-fluid chef-img' width={'100%'} src={e.icon} alt={e.label} />
@@ -28,7 +35,7 @@ const OurChefsList = () => {
                           {[1, 2, 3, 4].map((e, ind) => {
                             return (
                               <>
-                                <div key={ind} className="col-1 p-3 text-light">{e}</div>
+                                <div key={ind} className="col-1 text-light fs25">{e}</div>
                               </>
                             )
                           })}

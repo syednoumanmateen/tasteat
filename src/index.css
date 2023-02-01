@@ -48,6 +48,14 @@
   color: white;
 }
 
+.text-black {
+  color: black;
+}
+
+.text-black:hover {
+  color: rgb(233, 182, 95);
+}
+
 .text-info {
   color: rgb(133, 133, 133);
 }
@@ -98,6 +106,11 @@
   display: inline-block;
   border-top: 1px solid rgb(233, 182, 95);
   border-bottom: 1px solid rgb(233, 182, 95);
+}
+
+.brd-10-sld {
+  border: 10px solid rgb(49, 55, 65);
+  height: 200px;
 }
 
 .brd-tb-nor {
@@ -199,7 +212,8 @@
 
 /* scrollbar */
 .scrollbar {
-  overflow: hidden;
+  overflow: scroll;
+  height: 910px;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -244,4 +258,22 @@
 
 .order-1 {
   order: 1;
+}
+
+/* progress bar */
+
+.progress {
+  height: 6px
+}
+
+.progress-bar {
+  background-color: black;
+}
+
+/* chef */
+
+.width-chef {
+  padding: 18px;
+  width: 70px;
+  height: 70px;
 }

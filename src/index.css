@@ -119,9 +119,15 @@
   border-bottom: 1px solid black;
 }
 
+.brd-25 {
+  border-top: 25px solid rgb(62, 66, 74);
+  border-left: 25px solid rgb(62, 66, 74);
+  border-right: 25px solid rgb(62, 66, 74);
+}
+
 .brd-rad-tltr-50 {
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-top-left-radius: 48%;
+  border-top-right-radius: 48%;
 }
 
 .brd-rad-tr-50 {
@@ -196,7 +202,7 @@
 
 /* rotate */
 .rotate {
-  animation: rotation 10s infinite linear;
+  animation: rotation 5s infinite linear;
   width: max-content;
 }
 
@@ -251,7 +257,6 @@
 }
 
 /* order */
-
 .order-0 {
   order: 0;
 }
@@ -261,7 +266,6 @@
 }
 
 /* progress bar */
-
 .progress {
   height: 6px
 }
@@ -271,9 +275,15 @@
 }
 
 /* chef */
-
 .width-chef {
   padding: 18px;
   width: 70px;
   height: 70px;
+}
+
+/* input outline */
+.form-control:focus {
+  border-color: rgb(233, 182, 95);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }

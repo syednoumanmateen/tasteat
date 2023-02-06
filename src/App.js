@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router";
 import About from "./Component/About";
-import BlogDetails from "./Component/BlogDetails";
+import BookATable from "./Component/BookATable";
 import ChefSingle from "./Component/ChefSingle";
+import Child from "./Component/Child";
 import Contact from "./Component/Contact";
 import FAQ from "./Component/FAQ";
 import Gallery from "./Component/Gallery";
@@ -12,9 +13,8 @@ import OrderViaApp from "./Component/OrderViaApp";
 import OrderViaAppSingle from "./Component/OrderViaAppSingle";
 import OurChefs from "./Component/OurChefs";
 import OurMenu from "./Component/OurMenu";
+import Parent from "./Component/Parent";
 import Recipe from "./Component/Recipe";
-import Blog from "./Component/Blog";
-import BookATable from "./Component/BookATable";
 import Footer from "./Reuse/Footer";
 import Navbar from "./Reuse/Navbar";
 // import { useEffect } from "react";
@@ -29,9 +29,9 @@ const App = () => {
 
   return (
     <>
-      <div className="bg-theme">
+      {/* <div className="bg-theme">
         <Navbar />
-      </div>
+      </div> */}
 
       <Routes>
         <Route default element={<Home />}></Route>
@@ -50,13 +50,13 @@ const App = () => {
         <Route path="orderviaappsingle" element={<OrderViaAppSingle />}></Route>
         <Route path="faq" element={<FAQ />}></Route>
         <Route path="contact" element={<Contact />}></Route>
-        <Route path="blog" element={<Blog />}></Route>
-        <Route path="blog/:id" element={<BlogDetails />}></Route>
+        <Route path="parent" element={<Parent />}></Route>
+        <Route path="parent/:id" element={<Child />}></Route>
       </Routes>
 
-      <div className="bg-theme pt-5">
-        <Footer />
-      </div>
+      {/* <div className="bg-theme pt-5"> */}
+      {/* <Footer /> */}
+      {/* </div> */}
     </>
   );
 }

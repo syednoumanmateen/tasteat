@@ -7,9 +7,11 @@ import logo1 from '../Images/about/book1.svg'
 import logo2 from '../Images/about/book2.svg'
 import logo3 from '../Images/about/book3.svg'
 import logo4 from '../Images/about/book4.svg'
+import { useRef } from 'react'
 
 const BookATable = () => {
   let isDesk = Common.isDesktop() ? true : false
+  let inputRef = useRef();
 
   let formInput = ["Name", "Email", "Phone", "Date", "Timing", "Person"]
   let chooseList = [{ "icon": logo1, "label": "Fresh Foods" }, { "icon": logo2, "label": "Fast Delivery" }, { "icon": logo3, "label": "Quality Interior" }, { "icon": logo4, "label": "24/7 Service" }]
@@ -32,7 +34,7 @@ const BookATable = () => {
                         return (
                           <>
                             <div key={ind} className={`col-12 col-lg-6 mb-5 ${isDesk ? 'pe-3' : ''}`}>
-                              <input type="text" className="form-control  py-3" placeholder={e} aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                              <input ref={inputRef} type="text" className="form-control  py-3" onClick={() => formInput.map(d => ind=== d ? inputRef.current.style.border = '1px solid rgb(233, 182, 95)':inputRef.current.style='none')} placeholder={e} aria-label="Recipient's username" aria-describedby="basic-addon2" />
                             </div>
                           </>
                         )

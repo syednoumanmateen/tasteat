@@ -10,6 +10,10 @@ import BookATable from '../Reuse/BookATable'
 import OurChefsList from '../Reuse/OurChefsList'
 import Testimonial from '../Reuse/Testimonial'
 import Title from '../Reuse/Title'
+import signature from '../Images/home/signature.svg'
+import wheelabout from '../Images/wheelabout.svg'
+import about from '../Images/about/about.jpg'
+import profile from '../Images/about/ceo.jpg'
 
 const About = () => {
 
@@ -21,7 +25,42 @@ const About = () => {
     <>
       <div>
         <Title>About Us</Title>
-        about
+        <div className={`${isDesk ? 'py-5' : 'py-3'}`}></div>
+        <div className="contianer-fluid">
+          <div className="row g-0 p-0 align-items-center">
+            <div className={`col-12 col-lg-6 ${isDesk ? 'p-5' : 'p-3'}`}>
+              <div>
+                <div className={`brd-tb mb-3`}>ABOUT US</div>
+              </div>
+              <div className='fw500 fs28 mb-2'>Quality And  Tradition</div>
+              <div className={`py-3 mb-3 ${isDesk ? 'fs25' : 'fs22 mb-4'}`}>The people, food and the prime locations make the perfect place good friends & family to come together and have great time. Every time you perfectly dine with us, it should happy for great inspired food in an environment designed with individual touches unique to the local area.</div>
+              <div className={`mb-3 text-muted`}>JOSEFINE</div>
+              <img src={signature} className='img-fluid mb-4' alt="signature" />
+              <div className={` ${isDesk ? 'py-5' : 'py-4'}`}>
+                <button className='btn btn-theme btn-md fs-3'>See Our Masters</button>
+              </div>
+            </div>
+            <div className={`col-12 col-lg-6 ${isDesk ? 'p-5 mb-5' : 'p-3'}`}>
+              <div className={`card border-0 position-relative ${isDesk ? '' : 'shadow'}`} style={{ width: isDesk ? '550px' : '' }}>
+                <img className='card-img-top brd-rad-tr-50' style={{ width: isDesk ? '' : '325px', zIndex: isDesk ? '0' : '1' }} src={about} alt="about" />
+                <img className={`card-img-top position-absolute wheel-about rotate`} style={{ width: isDesk ? '' : '170px' }} src={wheelabout} alt="wheel" />
+                <div className={`card-body ${isDesk ? 'position-absolute  about-card p-5 bg-light border' : 'p-3'}`}>
+                  <div className="row g-0 align-items-center mb-3">
+                    <div className="col-2">
+                      <img src={profile} className='img-fluid brd-rad-50' width={'65px'} alt="ceo profile" />
+                    </div>
+                    <div className="col-10 ps-3">
+                      <div className='fs28 fw600'>Josefine</div>
+                      <div className='fs18'>CEO & Founder</div>
+                    </div>
+                  </div>
+                  <div className={`fs20`}>Peoples gave stars for our quality
+                    and helthy food.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className={`bg-about-image ${isDesk ? 'py-5' : 'py-3'}`}>
           <div className='container-fluid  p-0'>
             <div className={`row g-0 p-0`}>

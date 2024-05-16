@@ -8,7 +8,7 @@ const Navbar = () => {
 
   let isDesk = Common.isDesktop() ? true : false
 
-  let navlist = <ul className={`navbar-nav ${isDesk ? "ms-4" : ""}`}>
+  let navlist = <>
     {
       NavbarList.map((e, ind) => {
         let list = (e.label === 'Pages') ?
@@ -18,25 +18,16 @@ const Navbar = () => {
                 <div className="col-6 col-lg-2 text-end">{e.icon}</div></div>
             </NavLink>
             <ul className={`dropdown-menu dropdown-menu-dark ${isDesk ? 'bg-theme p-3' : 'bg-menu px-0 border-0'}`}>
-              {e.sub.map((i, key) => {
-                return (
-                  <>
-                    <li key={key} className={`nav-item ${isDesk ? "my-2 fs-5" : "fs-6 my-1 ms-4 py-1"}`}><NavLink className="nav-link text-light p-0" to={i.path}>{i.label}</NavLink></li>
-                  </>
-                )
-              })}
+              {e.sub.map((i, key) => (<li key={key} className={`nav-item ${isDesk ? "my-2 fs-5" : "fs-6 my-1 ms-4 py-1"}`}><NavLink className="nav-link text-light p-0" to={i.path}>{i.label}</NavLink></li>))}
             </ul>
           </li> : <li className={`nav-item ${isDesk ? "me-4 fs-5" : "fs-6 py-1"}`} key={ind}>
             <NavLink className='text-decoration-none text-light' to={e.path}>{e.label}</NavLink>
           </li>
-        return (
-          <>
-            {list}
-          </>
-        )
+
+        return (<>{list}</>)
       })
     }
-  </ul>
+  </>
 
   return (
     <>
@@ -60,7 +51,9 @@ const Navbar = () => {
                   <i className="bi bi-list fs-1"></i>
                 </button>
                 <div className={`collapse navbar-collapse col-8 p-2 ${isDesk ? '' : 'bg-menu'}`} id="navbarNavDropdown">
-                  {navlist}
+                  <ul className={`navbar-nav ${isDesk ? "ms-4" : ""}`}>
+                    {navlist}
+                  </ul>
                 </div>
               </nav>
             </div>

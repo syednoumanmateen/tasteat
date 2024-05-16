@@ -21,13 +21,7 @@ const Instagram = () => {
       </div>
       <div className='fw500 fs28 text-center'>Instagram Gallery</div>
       <div className={`text-center ${isDesk ? "p-5" : "p-3"}`}>
-        {instagramList.map((e, ind) => {
-          return (
-            <>
-              <img className='me-4 mb-3' key={ind} src={e} width={isDesk ? '250' : '98%'} alt={ind} />
-            </>
-          )
-        })}
+        {instagramList.map((e, ind) => (<img className='me-4 mb-3' key={ind} src={e} width={isDesk ? '250' : '98%'} alt={ind} />))}
       </div>
     </>
   )

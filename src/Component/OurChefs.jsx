@@ -24,18 +24,14 @@ const OurChefs = () => {
             </div>
             <div className='fw500 fs28 mb-2'>Only Skilled Team</div>
             <div className={`py-3 mb-3 ${isDesk ? 'fs25' : 'fs22 mb-4'}`}>Every time you perfectly dine with us, it should happy for great inspired food in an environment designed with individual touches unique to the local area.</div>
-            {progessBArList.map((e, ind) => {
-              return (
-                <>
-                  <div className='mb-3' key={ind}>
-                    <div className='fw700 fs28 mb-2'>{e.label}</div>
-                    <div className="progress">
-                      <div className="progress-bar" role="progressbar" style={{ width: `${e.wid}` }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </>
-              )
-            })}
+            {progessBArList.map((e, ind) => (
+              <div className='mb-3' key={ind}>
+                <div className='fw700 fs28 mb-2'>{e.label}</div>
+                <div className="progress">
+                  <div className="progress-bar" role="progressbar" style={{ width: `${e.wid}` }} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            ))}
             <div className={` ${isDesk ? 'py-5' : 'py-4'}`}>
               <button className='btn btn-theme btn-md fs-3'>See all dishes</button>
             </div>

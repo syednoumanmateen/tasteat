@@ -45,29 +45,25 @@ const ChefSingle = () => {
             <div className='fw500 fs25 mb-2 text-warning'>Master Chef</div>
             <div className='fs20 mb-5'>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divid with additional clickthroughs from Nanotechnology immersion along the information highway will close the loop on focusing solely the bottom line.</div>
             <div className="row row align-items-center">
-              {chefContent.map((e, ind) => {
-                return (
-                  <>
-                    <div key={ind} className="col-12 col-lg-6 p-0 mb-5">
-                      <div className="row align-items-center justify-content-center">
-                        <div className="col-12 col-lg-3">
-                          <div className={`bg-dark brd-rad-50 width-chef mb-3 ${isDesk ? '' : ''} `}>
-                            <img className={`${isDesk ? '' : ''} `} width={'35px'} src={e.icon} alt="" />
-                          </div>
-                        </div>
-                        <div className="col-12 col-lg-9">
-                          <div className='fs25 fw500'>
-                            {e.label}
-                          </div>
-                          <div className={`fs18 ${(ind === 1 || ind === 2) ? 'text-warning' : ''}`}>
-                            {e.text}
-                          </div>
-                        </div>
+              {chefContent.map((e, ind) => (
+                <div key={ind} className="col-12 col-lg-6 p-0 mb-5">
+                  <div className="row align-items-center justify-content-center">
+                    <div className="col-12 col-lg-3">
+                      <div className={`bg-dark brd-rad-50 width-chef mb-3 ${isDesk ? '' : ''} `}>
+                        <img className={`${isDesk ? '' : ''} `} width={'35px'} src={e.icon} alt="" />
                       </div>
                     </div>
-                  </>
-                )
-              })}
+                    <div className="col-12 col-lg-9">
+                      <div className='fs25 fw500'>
+                        {e.label}
+                      </div>
+                      <div className={`fs18 ${(ind === 1 || ind === 2) ? 'text-warning' : ''}`}>
+                        {e.text}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

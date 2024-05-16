@@ -23,15 +23,11 @@ const Orderviaapp = () => {
           place and order the food from our restaurant via these food ordering app.</div>
         <div className="container-fluid">
           <div className={`row text-center ${isDesk ? "p-5" : "p-3"}`}>
-            {orderViaAppList.map((e, ind) => {
-              return (
-                <>
-                  <div className="col-12 col-lg-4 mb-5" key={ind}>
-                    <img className='brd-sm' src={e} alt="mobile" />
-                  </div>
-                </>
-              )
-            })}
+            {orderViaAppList.map((e, ind) => (
+              <div className="col-12 col-lg-4 mb-5" key={ind}>
+                <img className='brd-sm' src={e} alt="mobile" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

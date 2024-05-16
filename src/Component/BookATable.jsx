@@ -30,15 +30,11 @@ const BookATable = () => {
                   <div className='fs20 mb-4'>Take a look at Restaurantate fabulous menu. And then use our online booking system to book a table instantly!</div>
                   <div className="container-fluid">
                     <div className="input-group px-1 row g-0">
-                      {formInput.map((e, ind) => {
-                        return (
-                          <>
-                            <div key={ind} className={`col-12 col-lg-6 mb-5 ${isDesk ? 'pe-3' : ''}`}>
-                              <input ref={inputRef} type="text" className="form-control  py-3" onClick={() => formInput.map(d => ind=== d ? inputRef.current.style.border = '1px solid rgb(233, 182, 95)':inputRef.current.style='none')} placeholder={e} aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                            </div>
-                          </>
-                        )
-                      })}
+                      {formInput.map((e, ind) => (
+                        <div key={ind} className={`col-12 col-lg-6 mb-5 ${isDesk ? 'pe-3' : ''}`}>
+                          <input ref={inputRef} type="text" className="form-control  py-3" onClick={() => formInput.map(d => ind === d ? inputRef.current.style.border = '1px solid rgb(233, 182, 95)' : inputRef.current.style = 'none')} placeholder={e} aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <button className={`btn btn-theme btn-md py-2 px-4 fs24 ${isDesk ? "" : "py-3"}`} id="basic-addon2">Book A Table</button>
@@ -63,20 +59,18 @@ const BookATable = () => {
                 <div className='fs20 mb-4'>The people, food and the prime locations make Restaurantate the perfect place good friends & family to come together and have great time. Every time you perfectly dine with us, it should happy for great inspired food in an environment designed with individual touches unique to the local area.</div>
                 <div className="container-fluid">
                   <div className="row g-0 mb-5">
-                    {chooseList.map((e, ind) => {
-                      return (<>
-                        <div className={`col-12 col-lg-6 mb-3 ${isDesk ? 'pe-3' : ''}`}>
-                          <div className="brd-tag">
-                            <div className="row g-0 p-3">
-                              <div className="col-1">
-                                <img src={e.icon} alt={e.label} />
-                              </div>
-                              <div className="col-11 ps-3 fs24">{e.label}</div>
+                    {chooseList.map((e, ind) => (
+                      <div key={ind} className={`col-12 col-lg-6 mb-3 ${isDesk ? 'pe-3' : ''}`}>
+                        <div className="brd-tag">
+                          <div className="row g-0 p-3">
+                            <div className="col-1">
+                              <img src={e.icon} alt={e.label} />
                             </div>
+                            <div className="col-11 ps-3 fs24">{e.label}</div>
                           </div>
                         </div>
-                      </>)
-                    })}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>

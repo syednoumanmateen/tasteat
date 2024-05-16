@@ -28,23 +28,19 @@ const FAQ = () => {
         </div>
         <div className='fw500 fs28 text-center mb-3'>Frequently Asked Questions</div>
         <div className="container mb-5">
-          {faqList.map((e, ind) => {
-            return (
-              <>
-                <div className="card mb-3" key={ind}>
-                  <div className="card-body">
-                    <div className="row fs24 fw500" onClick={() => click(ind)}>
-                      <div className="col-10">{e.qa}{e.key}</div>
-                      <div className="col-2 text-end">
-                        {(e.key) ? <i className={`bi bi-chevron-up`}></i> : <i className={`bi bi-chevron-doen`}></i>}
-                      </div>
-                    </div>
-                    {(e.key) ? <div>{e.ans}</div> : ""}
+          {faqList.map((e, ind) => (
+            <div className="card mb-3" key={ind}>
+              <div className="card-body">
+                <div className="row fs24 fw500" onClick={() => click(ind)}>
+                  <div className="col-10">{e.qa}{e.key}</div>
+                  <div className="col-2 text-end">
+                    {(e.key) ? <i className={`bi bi-chevron-up`}></i> : <i className={`bi bi-chevron-doen`}></i>}
                   </div>
                 </div>
-              </>
-            )
-          })}
+                {(e.key) ? <div>{e.ans}</div> : ""}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

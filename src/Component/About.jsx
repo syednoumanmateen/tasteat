@@ -64,20 +64,16 @@ const About = () => {
         <div className={`bg-about-image ${isDesk ? 'py-5' : 'py-3'}`}>
           <div className='container-fluid  p-0'>
             <div className={`row g-0 p-0`}>
-              {aboutList.map((e, ind) => {
-                return (
-                  <>
-                    <div className={`col-12 col-lg-3`} key={ind}>
-                      <div className={` text-center text-light ${isDesk ? 'p-5' : 'px-2 py-4'} ${(isDesk && ind !== aboutList.length - 1) ? 'brd-r' : ''}`}>
-                        <img className='mb-4' src={e.icon} alt={e.label} />
-                        <div className='fs30 fw600'>{e.label}</div>
-                        <div className={`fs20 mb-3 mx-3`}>{e.description}</div>
-                        <div className='text-warning fs18'>See More</div>
-                      </div>
-                    </div>
-                  </>
-                )
-              })}
+              {aboutList.map((e, ind) => (
+                <div className={`col-12 col-lg-3`} key={ind}>
+                  <div className={` text-center text-light ${isDesk ? 'p-5' : 'px-2 py-4'} ${(isDesk && ind !== aboutList.length - 1) ? 'brd-r' : ''}`}>
+                    <img className='mb-4' src={e.icon} alt={e.label} />
+                    <div className='fs30 fw600'>{e.label}</div>
+                    <div className={`fs20 mb-3 mx-3`}>{e.description}</div>
+                    <div className='text-warning fs18'>See More</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

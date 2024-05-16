@@ -39,23 +39,21 @@ const Home = () => {
       </div>
       <div className="container-fluid p-0 bg-cream ">
         <div className="row g-0 p-0">
-          {timeList.map((e, ind) => {
-            return (<>
-              <div key={ind} className={`col-12 col-lg-4 p-0 ${e.anime}`}>
-                <div className={`row g-0 aligin-items-center ${isDesk ? 'p-5' : 'p-3'}`}>
-                  <div className={`col-12 col-lg-2 p-0`}>
-                    <div className="width-chef brd-rad-50 bg-dark">
-                      <img className='img-fluid' src={e.icon} alt={e.label} />
-                    </div>
-                  </div>
-                  <div className="col-12 col-lg-10 p-0">
-                    <div className="fs30 fw600">{e.label}</div>
-                    <div className={`fs20 ${ind === timeList.length - 1 ? 'text-black' : ''}`}>{e.description}</div>
+          {timeList.map((e, ind) => (
+            <div key={ind} className={`col-12 col-lg-4 p-0 ${e.anime}`}>
+              <div className={`row g-0 aligin-items-center ${isDesk ? 'p-5' : 'p-3'}`}>
+                <div className={`col-12 col-lg-2 p-0`}>
+                  <div className="width-chef brd-rad-50 bg-dark">
+                    <img className='img-fluid' src={e.icon} alt={e.label} />
                   </div>
                 </div>
+                <div className="col-12 col-lg-10 p-0">
+                  <div className="fs30 fw600">{e.label}</div>
+                  <div className={`fs20 ${ind === timeList.length - 1 ? 'text-black' : ''}`}>{e.description}</div>
+                </div>
               </div>
-            </>)
-          })}
+            </div>
+          ))}
         </div>
         <div className={`row g-0  align-items-center ${isDesk ? 'p-5' : 'p-3'}`}>
           <div className={`col-12 col-lg-6 p-0 mb-3`}>
@@ -65,16 +63,12 @@ const Home = () => {
             <div className='fw600 fs28'>The Delicious Story</div>
             <div className={`py-3 mb-3 ${isDesk ? 'fs25' : 'fs22 mb-4'}`}>The people, food and the prime locations make the perfect place  for the friends & family to come together and have great time.</div>
             <div className="row g-0 mb-3">
-              {[{ "year": '2018', "text": "Plan for this restaurant to deliver healthy food." }, { "year": '2022', "text": "Happily in the fourth year by fulfill the motto." }].map((e, ind) => {
-                return (
-                  <>
-                    <div className="col-12 col-lg-6 p-0 mb-3">
-                      <div className='fw600 fs28'>{e.year}</div>
-                      <div className={`fs20`}>{e.text}</div>
-                    </div>
-                  </>
-                )
-              })}
+              {[{ "year": '2018', "text": "Plan for this restaurant to deliver healthy food." }, { "year": '2022', "text": "Happily in the fourth year by fulfill the motto." }].map((e, ind) => (
+                <div className="col-12 col-lg-6 p-0 mb-3">
+                  <div className='fw600 fs28'>{e.year}</div>
+                  <div className={`fs20`}>{e.text}</div>
+                </div>
+              ))}
             </div>
             <div className={`mb-3 fs22 text-muted`}>JOSEFINE</div>
             <img src={signature} className='img-fluid mb-4' alt="signature" />
@@ -95,11 +89,7 @@ const Home = () => {
             </div>
           </div>
           <div className={`col-12 col-lg-6 p-0 ${isDesk ? 'scrollbar' : ''}`}>
-            {menuList.map((e, ind) => {
-              return (
-                <OurMenuList key={ind} data={e} />
-              )
-            })}
+            {menuList.map((e, ind) => (<OurMenuList key={ind} data={e} />))}
           </div>
         </div>
       </div>
@@ -118,16 +108,14 @@ const Home = () => {
           </div>
           <div className="col-12 col-lg-7 p-0">
             <div className="row align-items-center justify-content-center">
-              {offerList.map((e, ind) => {
-                return (<>
-                  <div key={ind} className="col-12 col-lg-4 p-0 mb-3">
-                    <div className="brd-10-sld text-center p-5 m-1">
-                      <img className='img-fluid mb-3' src={e.icon} alt="" />
-                      <div>{e.label}</div>
-                    </div>
+              {offerList.map((e, ind) => (
+                <div key={ind} className="col-12 col-lg-4 p-0 mb-3">
+                  <div className="brd-10-sld text-center p-5 m-1">
+                    <img className='img-fluid mb-3' src={e.icon} alt="" />
+                    <div>{e.label}</div>
                   </div>
-                </>)
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>

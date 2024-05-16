@@ -33,19 +33,16 @@ const Contact = () => {
             <div className="">
               <div className='fw500 fs28 mb-2'>Contact Information</div>
               <div className="fs18 mb-5">We love hearing from customers, visitors and people from the Restaurantate. We really appreciate you taking the time to get in touch. Please fill in the form below.</div>
-              {(contactList || []).map((e, ind) => {
-                return (
-                  <>
-                    <div className="row mb-4 align-items-center" key={ind}>
-                      <div className="col-1">
-                        <div className="brd-rad-50 bg-dark text-center width-icon">
-                          <img className='p-0' src={e.icon} alt={e.text} />
-                        </div>
-                      </div>
-                      <div className="col-11 ps-5 fs22 fw500">{e.text}</div>
+              {(contactList || []).map((e, ind) => (
+                <div className="row mb-4 align-items-center" key={ind}>
+                  <div className="col-1">
+                    <div className="brd-rad-50 bg-dark text-center width-icon">
+                      <img className='p-0' src={e.icon} alt={e.text} />
                     </div>
-                  </>)
-              })}
+                  </div>
+                  <div className="col-11 ps-5 fs22 fw500">{e.text}</div>
+                </div>
+              ))}
             </div>
           </div>
           <div className="col-12 col-lg-7">
